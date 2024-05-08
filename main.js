@@ -1,8 +1,10 @@
 (function() {
 
-    const conversionType = document.getElementById("conversionType");
+    const conversionFrom = document.getElementById("convertFrom");
+    const conversionTo = document.getElementById("convertTo");
     const result = document.getElementById("result");
     const input = document.getElementById("input");
+    const form = document.getElementById("form");
   
 
     let bin2dec = true;
@@ -23,7 +25,7 @@
     });
 
     function swap() {
-      if (isValidInput) {
+      if (isValidInput()) {
         const userInput = getUserInput();
         const convertedResult = convert(userInput);
         
@@ -36,9 +38,15 @@
     }
 
     function tryConvert() {
-      if (isValidInput) {
-        convert(input.value.trim());
-      }      
+      if (isValidInput()) {
+        convert(getUserInput());
+        input.setCustomValidity("");
+      } else {
+        input.setCustomValidity("Enter a valid " + (bin2dec ? "binary" : "decimal") + " number.");
+        console.log("Invalid input.");
+        form.reportValidity();
+        input.value = "";
+      }
     }
 
     function getUserInput() {
@@ -67,10 +75,11 @@
 
     function updateConverionTypeText() {
         if (bin2dec) {
-            conversionType.innerHTML = "Binary to Decimal";
+          conversionFrom.innerHTML = "Binary";
+          conversionTo.innerHTML = "Decimal";
         } else {
-            conversionType.innerHTML = "Decimal to Binary";
-
+          conversionFrom.innerHTML = "Decimal";
+          conversionTo.innerHTML = "Binary";
         }
     }
 })();
