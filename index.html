@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bin2Dec</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <main>
+        <div id="title">Bin2Dec</div>
+        <!-- <div id="mainRow"> -->
+            <form action="" id="form">
+                <div class="verticalPair">
+                    <span id="conversionType">Binary to Decimal</span>
+                    <div class="boxBorder">
+                        <input type="text" id="input" name="Input" required pattern="^[01]+$">
+                    </div>
+                </div>
+    
+                <div class="verticalPair">
+                    <span>Swap</span>
+                    <a id="swapOp"  href="index.html">
+                        <div class="boxButton">
+                            <svg class="boxButtonIcon" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="M275.33-160 80-355.33l195.33-195.34 46.67 47-115 115h306.33V-322H207l115 115-46.67 47Zm409.34-249.33-46.67-47 115-115H446.67V-638H753L638-753l46.67-47L880-604.67 684.67-409.33Z"/></svg>
+                        </div>
+                    </a>
+                </div>
+    
+
+                <div class="verticalPair">
+                    <span>Convert</span>
+                    <!-- <input id="convertButton" type="submit" value="Submit"> -->
+                    <a id="convertButton"  href="#" onclick="convert()">
+                        <div class="boxButton">
+                            <svg class="boxButtonIcon" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="M160-286.67v-106.66h640v106.66H160Zm0-280v-106.66h640v106.66H160Z"/></svg>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="verticalPair">
+                    <span>Result</span>
+                    <div class="boxBorder">
+                        <span id="result"></span>
+                    </div>
+                </div>
+            </form>
+        <!-- </div> -->
+    </main>
+    
+    <footer>
+        k23j
+    </footer>
+    <script src='main.js'></script>
+</body>
+</html>
