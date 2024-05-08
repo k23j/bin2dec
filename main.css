@@ -32,14 +32,14 @@ main {
     padding: 6px 12px;
 }
 
-#form {
+#mainRow {
     padding: 12px 24px;
     display: flex;
     flex-direction: row;
     gap: 16px;
-}
-
-.verticalPair {
+  }
+  
+  .verticalPair {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,35 +47,44 @@ main {
 }
 
 .verticalPair span {
-    /* text-align: center; */
-    /* padding: 24px; */
-    margin-bottom: 4px;
-    font-size: .8em;
-    overflow: hidden;
-    white-space: nowrap;
-    /* background-color: red; */
+  /* text-align: center; */
+  /* padding: 24px; */
+  margin-bottom: 4px;
+  font-size: .8em;
+  overflow: hidden;
+  white-space: nowrap;
+  /* background-color: red; */
 }
 
 .boxBorder {
-    height: 52px;
-    min-width: 128px;
-    width: 100%;
-    border: 1px solid #012E40;
-    border-radius: 8px;
+  height: 52px;
+  min-width: 150px;
+  width: 100%;
+  border: 1px solid #012E40;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#convertButton {
+  all: unset;
+  cursor:pointer;
 }
 
 #input {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 
-   border: none; 
-   outline: none; 
-   box-sizing: border-box;
-   font-size: 16px;
-   background-color: transparent;
+  border: none; 
+  outline: none; 
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: transparent;
 
-   text-align: center;
+  text-align: center;
 }
 
 .boxButton {
@@ -92,6 +101,11 @@ main {
     margin: auto;
 }
 
+#result {
+  display: block;
+  font-size: 16px;
+}
+
 footer {
     position: absolute;
     right: 0;
@@ -102,4 +116,9 @@ footer {
     color: white;
     font-weight: bold;
     text-shadow: 1px 1px 4px black;
+}
+
+#profileLink, #profileLink:visited {
+  color: white;
+  text-decoration: none;
 }
