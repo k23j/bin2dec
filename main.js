@@ -3,8 +3,9 @@
     const conversionFrom = document.getElementById("convertFrom");
     const conversionTo = document.getElementById("convertTo");
     const result = document.getElementById("result");
+    const buttonClear = document.getElementById("buttonClear");
     const input = document.getElementById("input");
-    const form = document.getElementById("form");
+    const form = document.getElementById("form");    
   
 
     let bin2dec = true;
@@ -23,6 +24,14 @@
         event.preventDefault();
         tryConvert();
     });
+
+    buttonClear.addEventListener('click', clear);
+
+    // document.getElementById("swapOp")
+    // .addEventListener('click', function(event){
+    //     event.preventDefault();
+    //     swap();
+    // });
 
     function swap() {
       if (isValidInput()) {
@@ -81,5 +90,10 @@
           conversionFrom.innerHTML = "Decimal";
           conversionTo.innerHTML = "Binary";
         }
+    }
+
+    function clear() {
+      input.value = '';
+      result.innerHTML = '';
     }
 })();

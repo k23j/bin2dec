@@ -29,7 +29,12 @@ main {
   border-radius: 12px 12px 0 0;
   color: white;
   font-weight: bold;
-  padding: 6px 12px;
+  padding: 6px 16px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #mainRow {
@@ -90,7 +95,7 @@ main {
   align-items: center;
 }
 
-#convertButton {
+#convertButton, #buttonClear {
   all: unset;
   cursor: pointer;
 }
